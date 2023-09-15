@@ -1,0 +1,11 @@
+-- Your SQL goes here
+CREATE TABLE users (
+    id SMALLINT UNSIGNED NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(32) UNIQUE NOT NULL,
+    password VARCHAR(32) NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT NOW(),
+    updated_at TIMESTAMP NOT NULL DEFAULT NOW() ON UPDATE NOW()
+);
+
+INSERT INTO users(username, password)
+VALUES('djose1164', '1234');
